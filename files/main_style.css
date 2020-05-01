@@ -203,6 +203,19 @@ ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, body, html, p, blockquote, fields
  .banner-wrap .banner-content div.paragraph { margin-bottom: 25px; font-size: 1.2em; }
  .banner-wrap .banner-content p { margin-bottom: 25px; font-size: 1.2em; }
  .wsite-section { height: auto !important; }
+ .btn {
+  background-color: gray;
+  border: none;
+  color: white;
+  /*padding: 1em 1em;*/
+  font-size: 2em;
+  cursor: pointer;
+  /*margin-top: 0.5em;*/
+  margin-right: 2em
+}
+.btn:hover {
+  background-color: orange;
+}
  #wsite-mini-cart { position: fixed !important; top: inherit !important; bottom: 0px; left: 0 !important; z-index: 6; width: 100%; border: none; border-radius: 0; backface-visibility: hidden; -webkit-backface-visibility: hidden; -webkit-transition: all 300ms ease-in-out; -moz-transition: all 300ms ease-in-out; -ms-transition: all 300ms ease-in-out; -o-transition: all 300ms ease-in-out; transition: all 300ms ease-in-out; }
  #wsite-mini-cart.arrow-top:before, #wsite-mini-cart.arrow-top:after { border: none !important; }
  #wsite-mini-cart.arrow-left:before, #wsite-mini-cart.arrow-left:after { border: none !important; }
