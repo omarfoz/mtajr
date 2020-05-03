@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<style>
+body {
+  background-color: black;
+  text-align: center;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<h1>This is a Heading</h1>
+<p>This is a paragraph.</p>
+<img src="avatar.png" alt="Avatar" style="width:200px">
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="/__/firebase/7.14.2/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="/__/firebase/7.14.2/firebase-analytics.js"></script>
+
+<!-- Initialize Firebase -->
+<script src="/__/firebase/init.js"></script>
+
+<script>
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCqvC6fHbeYxJJP5u91mq3URZ0uqC-nc5U",
+  authDomain: "mtajr-55451.firebaseapp.com",
+  databaseURL: "https://mtajr-55451.firebaseio.com",
+  projectId: "mtajr-55451",
+  storageBucket: "mtajr-55451.appspot.com",
+  messagingSenderId: "1038428098562",
+  appId: "1:1038428098562:web:875ccae4158fd5a346171b",
+  measurementId: "G-QX6Z61LKLX"
+};
+
+
+firebase.initializeApp(firebaseConfig);
+
+function saveToFirebase(email) {
+    var emailObject = {
+        email: email
+    };
+
+    firebase.database().ref('subscription-entries').push().set(emailObject)
+        .then(function(snapshot) {
+            success(); // some success method
+        }, function(error) {
+            console.log('error' + error);
+            error(); // some error method
+        });
+}
+
+saveToFirebase("omaaaar");
+
+
+
+
+<script>
+
+</script>
+
+</body>
+</html>
