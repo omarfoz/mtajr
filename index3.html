@@ -11,7 +11,13 @@ fetch('https://api.github.com/repos/omarfoz/mtajr/contents/images?Authorization=
 .then(data => {
 images=data;
   Object.keys(data).forEach((key) => {
-    var ele = document.createElement("span");
+    var ele = document.createElement("div");
+    ele.setAttribute("class", "wsite-image wsite-image-border-none");
+    ele.setAttribute("style", "padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center");
+    var a = document.createElement("a");
+    a.setAttribute("href", "https://kiffa.sa/");
+   
+   
     var img = document.createElement("img");
     img.setAttribute("src", data[key].download_url);
     ele.appendChild(img);
@@ -19,33 +25,45 @@ images=data;
   });
 })
 .catch(err => console.error(err));
- $("#searchBox").change(function(event){
-    var searchTxt=$("#searchBox").val();
-    $('#emoji').empty();
-    setTimeout(function(){
-     Object.keys(images).forEach((key) => {
-     if(images[key].indexOf(searchTxt)!=-1){
-        var ele = document.createElement("span");
-        var img = document.createElement("img");
-        img.setAttribute("src", images[key]);
-        ele.appendChild(img);
-        var elem=document.getElementById('emoji').appendChild(ele);
-     }
-    
-  });
-   },0);
- });
 });
+  
  </script>
  </head>
  <body>
-<input type="text" id="searchBox" placeholder="search">
-<div id="emoji">
+<!-- <input type="text" id="searchBox" placeholder="search"> -->
+<!-- <div id="emoji">
           <ul id="emojiz"></ul>
           <span style="display:inline;"><img src=""></span>
           <span style="display:inline; "><img src=""></span>
           <span style="display:inline;"><img src=""></span>
           <span style="display:inline; "><img src=""></span>
-</div>
+</div> -->
+<!--   <div id="emoji">
+          <ul id="emojiz"></ul>
+          <span style="display:inline;"><img src=""></span>
+          <span style="display:inline; "><img src=""></span>
+          <span style="display:inline;"><img src=""></span>
+          <span style="display:inline; "><img src=""></span>
+</div> -->
+
+  <div class="wsite-section-elements">
+<div id="emoji">
+<!--  <div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center"> -->
+<!-- <a href='https://kiffa.sa/' target='_blank'> -->
+<!--   <a href='' target='_blank'>
+<img src="images/14.jpg" alt="Picture" style="width:auto;max-width:30%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div> -->
+  
+   </div>
+
+<div class="paragraph" style="text-align:center;"><font size="4">Kiffa - كِفّة</font></div>
+   </div>
+   
+
+
+  
+  
  </body>
 </html>
