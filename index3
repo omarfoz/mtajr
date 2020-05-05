@@ -1,0 +1,51 @@
+<html>
+ <head>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+ <script>
+
+$(document).ready(function(){
+
+var images={};
+fetch('https://api.github.com/emojis')
+.then(response => response.json())
+.then(data => {
+images=data;
+  Object.keys(data).forEach((key) => {
+    var ele = document.createElement("span");
+    var img = document.createElement("img");
+    img.setAttribute("src", data[key]);
+    ele.appendChild(img);
+    var elem=document.getElementById('emoji').appendChild(ele);
+  });
+})
+.catch(err => console.error(err));
+ $("#searchBox").change(function(event){
+    var searchTxt=$("#searchBox").val();
+    $('#emoji').empty();
+    setTimeout(function(){
+     Object.keys(images).forEach((key) => {
+     if(images[key].indexOf(searchTxt)!=-1){
+        var ele = document.createElement("span");
+        var img = document.createElement("img");
+        img.setAttribute("src", images[key]);
+        ele.appendChild(img);
+        var elem=document.getElementById('emoji').appendChild(ele);
+     }
+    
+  });
+   },0);
+ });
+});
+ </script>
+ </head>
+ <body>
+<input type="text" id="searchBox" placeholder="search">
+<div id="emoji">
+          <ul id="emojiz"></ul>
+          <span style="display:inline;"><img src=""></span>
+          <span style="display:inline; "><img src=""></span>
+          <span style="display:inline;"><img src=""></span>
+          <span style="display:inline; "><img src=""></span>
+</div>
+ </body>
+</html>
