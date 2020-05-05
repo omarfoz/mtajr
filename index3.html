@@ -13,7 +13,7 @@ images=data;
   Object.keys(data).forEach((key) => {
     var ele = document.createElement("span");
     var img = document.createElement("img");
-    img.setAttribute("src", data[key]);
+    img.setAttribute("src", data[key].download_url);
     ele.appendChild(img);
     var elem=document.getElementById('emoji').appendChild(ele);
   });
