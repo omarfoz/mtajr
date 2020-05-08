@@ -1,6 +1,24 @@
 /* CSS Document */
+.dark {
+  --text-color: #b6b6b6;
+  --background: #ececec;
+}
+
+.light {
+  --text-color: #1f1f1f;
+  --background: #000000;
+}
+
+.solar {
+  --text-color: #576e75;
+  --background: #fdf6e3;
+}
+
 body {
-background-color: rgb(90, 90, 90);}
+    color: var(--text-color);
+    background: var(--background);
+}
+
 
 h1 {
   color: white;
