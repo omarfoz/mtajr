@@ -37,8 +37,13 @@ images=data;
 
     var font = document.createElement("font");
     font.setAttribute("size", "4");
-    font.value = "Kiffa - كِفّة";    
     div2.appendChild(font);
+
+    var t = document.createTextNode("Kiffa - كِفّة");
+
+//     font.value = "Kiffa - كِفّة";    
+    font.appendChild(t);
+
     var elem=document.getElementById('emoji2').appendChild(div2);
 
 
