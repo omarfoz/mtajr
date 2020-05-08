@@ -11,10 +11,14 @@ fetch('https://api.github.com/repos/omarfoz/mtajr/contents/images?Authorization=
 .then(data => {
 images=data;
   Object.keys(data).forEach((key) => {
+    var div = document.createElement("div");
+   
     var ele = document.createElement("div");
     ele.setAttribute("class", "wsite-image wsite-image-border-none");
     ele.setAttribute("style", "padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center");
     
+   div.appendChild(ele);
+
     var a = document.createElement("a");
     a.setAttribute("href", "https://kiffa.sa/");
     ele.appendChild(a);
@@ -24,7 +28,8 @@ images=data;
     img.setAttribute("src", data[key].download_url);
     img.setAttribute("style", "width:auto;max-width:30%");
     a.appendChild(img);
-    var elem=document.getElementById('emoji').appendChild(ele);
+    var elem=document.getElementById('emoji').appendChild(a);
+   
   });
 })
 .catch(err => console.error(err));
