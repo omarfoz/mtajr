@@ -11,3 +11,7 @@ p {
   font-family: verdana;
   font-size: 20px;
 }
+img.center {
+  display: block;
+  margin: 0 auto;
+}
