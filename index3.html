@@ -28,7 +28,19 @@ images=data;
     img.setAttribute("src", data[key].download_url);
     img.setAttribute("style", "width:auto;max-width:30%");
     a.appendChild(img);
-    var elem=document.getElementById('emoji').appendChild(a);
+    var elem=document.getElementById('emoji').appendChild(div);
+   
+//    <div class="paragraph" style=" text-align:center;"><font size="4">Kiffa - كِفّة</font></div>
+    var div2 = document.createElement("div");
+    div2.setAttribute("class", "paragraph");
+    div2.setAttribute("style", "text-align:center");
+
+    var font = document.createElement("font");
+    font.setAttribute("size", "4");
+    font.value = "Kiffa - كِفّة";     
+    var elem=document.getElementById('emoji2').appendChild(div2);
+
+
    
   });
 })
@@ -65,8 +77,12 @@ images=data;
 </div> -->
   
    </div>
+   
+   
+   <div id="emoji2">
+   </div>
 
-<div class="paragraph" style=" text-align:center;"><font size="4">Kiffa - كِفّة</font></div>
+<!-- <div class="paragraph" style=" text-align:center;"><font size="4">Kiffa - كِفّة</font></div> -->
    </div>
    
 
