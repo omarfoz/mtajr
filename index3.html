@@ -6,7 +6,8 @@
 $(document).ready(function(){
 
 var images={};
-fetch('https://api.github.com/repos/omarfoz/mtajr/contents/images?Authorization=141f746acd5f2e7287dcd45da5f7ca8154eb9afc')
+// fetch('https://api.github.com/repos/omarfoz/mtajr/contents/images?Authorization=141f746acd5f2e7287dcd45da5f7ca8154eb9afc')
+fetch('https://mtajrsa.eu-gb.mybluemix.net/mtajr?type=roasters')
 .then(response => response.json())
 .then(data => {
 images=data;
@@ -20,12 +21,12 @@ images=data;
    div.appendChild(ele);
 
     var a = document.createElement("a");
-    a.setAttribute("href", "https://kiffa.sa/");
+    a.setAttribute("href", data[key].weblink);
     ele.appendChild(a);
    
    
     var img = document.createElement("img");
-    img.setAttribute("src", data[key].download_url);
+    img.setAttribute("src", data[key].imglink);
     img.setAttribute("style", "width:auto;max-width:30%");
     a.appendChild(img);
     var elem=document.getElementById('emoji').appendChild(div);
@@ -39,7 +40,7 @@ images=data;
     font.setAttribute("size", "4");
     div2.appendChild(font);
 
-    var t = document.createTextNode(data[key].name);
+    var t = document.createTextNode(data[key].namelink);
 
 //     font.value = "Kiffa - كِفّة";    
     font.appendChild(t);
