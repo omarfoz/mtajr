@@ -4,10 +4,22 @@
  <script>
 
 $(document).ready(function(){
+ let headers = new Headers();
+
+    headers.append('Content-Type', 'application/json');
+    headers.append('Accept', 'application/json');
+//     headers.append('Authorization', 'Basic ' + base64.encode(username + ":" +  password));
+    headers.append('Origin','http://localhost:3000');
+
+
 
 var images={};
 // fetch('https://api.github.com/repos/omarfoz/mtajr/contents/images?Authorization=141f746acd5f2e7287dcd45da5f7ca8154eb9afc')
-fetch('https://mtajrsa.eu-gb.mybluemix.net/mtajr?type=roasters')
+fetch('https://mtajrsa.eu-gb.mybluemix.net/mtajr?type=roasters',{
+//         mode: 'cors',
+        method: 'GET',
+        headers: headers
+    })
 .then(response => response.json())
 .then(data => {
 images=data;
