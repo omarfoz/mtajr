@@ -19,8 +19,7 @@ fetch('https://mtajrsa.eu-gb.mybluemix.net/mtajr?type=roasters',{
         mode: 'no-cors',
         method: 'GET',
         headers: headers
-    })
-.then(response => response.json())
+    }).then(response => response.json())
 .then(data => {
 images=data;
   Object.keys(data).forEach((key) => {
