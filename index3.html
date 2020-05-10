@@ -23,6 +23,7 @@ var images={};
 fetch('https://mtajrsa.eu-gb.mybluemix.net/mtajr?type=roasters', { mode: 'no-cors' })
 .then(response => response.json())
 .then(data => {
+ Console.log("test")
 images=data;
   Object.keys(data).forEach((key) => {
     var div = document.createElement("div");
@@ -30,7 +31,7 @@ images=data;
     var ele = document.createElement("div");
     ele.setAttribute("class", "wsite-image wsite-image-border-none");
     ele.setAttribute("style", "padding-top:26px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center");
-    
+    Console.log("test1")
    div.appendChild(ele);
 
     var a = document.createElement("a");
@@ -59,6 +60,7 @@ images=data;
     font.appendChild(t);
 
     var elem=document.getElementById('emoji').appendChild(div2);
+   Console.log("test2")
 
 
    
