@@ -21,10 +21,11 @@ var images={};
 //         method: 'GET',
 //         headers: headers
 //     })
-fetch('https://mtajrsa.eu-gb.mybluemix.net/mtajr?type=roasters', { mode: 'no-cors' })
+// fetch('https://mtajrsa.eu-gb.mybluemix.net/mtajr?type=roasters', { mode: 'no-cors' })
+fetch('https://mtajrsa.eu-gb.mybluemix.net/mtajr?type=roasters')
 .then(response => response.json())
 .then(data => {
- console.log("test")
+console.log("test")
 images=data;
   Object.keys(data).forEach((key) => {
     var div = document.createElement("div");
