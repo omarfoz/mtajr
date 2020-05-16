@@ -1,22 +1,18 @@
-// Define which theme should load next
-const themeMap = {
-  dark: 'light',
-  light: 'solar',
-  solar: 'dark'
-};
+const chk = document.getElementById('chk');
 
-// Load the existing theme in local storage
-const theme = localStorage.getItem('theme');
-const bodyClass = document.body.classList;
-theme && bodyClass.add(theme);
+chk.addEventListener('change', () => {
+	document.body.classList.toggle('dark');
+});
 
-// Change the theme on a button click
-function toggleTheme() {
-  const current = localStorage.getItem('theme');
-  const next = themeMap[current];
+// SOCIAL PANEL JS
+const floating_btn = document.querySelector('.floating-btn');
+const close_btn = document.querySelector('.close-btn');
+const social_panel_container = document.querySelector('.social-panel-container');
 
-  bodyClass.replace(current, next);
-  localStorage.setItem('theme', next);
-}
+floating_btn.addEventListener('click', () => {
+	social_panel_container.classList.toggle('visible')
+});
 
-document.getElementById('themeButton').onclick = toggleTheme;
+close_btn.addEventListener('click', () => {
+	social_panel_container.classList.remove('visible')
+});
