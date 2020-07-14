@@ -170,7 +170,7 @@ ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, body, html, p, blockquote, fields
  body.nav-open .cento-header .hamburger span { background: transparent; }
  body.nav-open .cento-header .hamburger span:before { top: 1px; -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); -o-transform: rotate(45deg); transform: rotate(45deg); }
  body.nav-open .cento-header .hamburger span:after { top: -1px; -webkit-transform: rotate(-45deg); -moz-transform: rotate(-45deg); -ms-transform: rotate(-45deg); -o-transform: rotate(-45deg); transform: rotate(-45deg); }
- .cento-header { position: fixed; top: 0; left: 0; z-index: 9; height: 50px; padding: 10px 0; border-bottom: 2px solid #f7f7f7; backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+ .cento-header { position: inherit; top: 0; left: 0; z-index: 9; height: 50px; padding: 10px 0; border-bottom: 2px solid #f7f7f7; backface-visibility: hidden; -webkit-backface-visibility: hidden; }
  .cento-header .logo { display: table; overflow-y: hidden; max-width: calc(100vw - 100px); height: 30px; margin: 0 auto; }
  .cento-header .logo .wsite-logo { display: table-cell; vertical-align: middle; }
  .cento-header .logo a { font-size: 18px; line-height: 30px; }
