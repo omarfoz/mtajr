@@ -26,7 +26,7 @@ ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, body, html, p, blockquote, fields
  #icontent .container { overflow: visible; }
  .cento-header { position: relative; z-index: 9; width: 100%; background: #ffffff; padding: 40px 0 0; box-sizing: border-box; }
  .cento-header .logo { margin-bottom: 20px; }
- .cento-header .logo img { display: block; max-width: 120px; }
+ .cento-header .logo img { display: block; max-width: 200px; }
  .cento-header .logo #wsite-title { display: block; max-width: 500px; }
  .cento-header .logo, .cento-header .logo a { display: block; color: #000000; text-align: center; letter-spacing: .04em; font-family: 'Quattrocento Sans', sans-serif; font-size: 40px; font-weight: 700; line-height: normal; }
  .cento-header .nav-wrap { overflow: hidden; width: 100%; padding: 10px 0; background: #ffffff; box-sizing: border-box; backface-visibility: hidden; -webkit-backface-visibility: hidden; }
@@ -171,7 +171,7 @@ ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, body, html, p, blockquote, fields
  body.nav-open .cento-header .hamburger span:before { top: 1px; -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); -o-transform: rotate(45deg); transform: rotate(45deg); }
  body.nav-open .cento-header .hamburger span:after { top: -1px; -webkit-transform: rotate(-45deg); -moz-transform: rotate(-45deg); -ms-transform: rotate(-45deg); -o-transform: rotate(-45deg); transform: rotate(-45deg); }
  .cento-header { position: inherit; top: 0; left: 0; z-index: 9; height: 50px; padding: 10px 0; border-bottom: 2px solid #f7f7f7; backface-visibility: hidden; -webkit-backface-visibility: hidden; }
- .cento-header .logo { display: table; overflow-y: hidden; max-width: calc(100vw - 100px); height: 50px; margin: 0 auto; }
+ .cento-header .logo { display: table; overflow-y: hidden; max-width: calc(100vw - 100px); height: 30px; margin: 0 auto; }
  .cento-header .logo .wsite-logo { display: table-cell; vertical-align: middle; }
  .cento-header .logo a { font-size: 18px; line-height: 30px; }
  .cento-header .logo a img { height: auto; max-height: 30px; margin-top: 0 !important; margin-left: 0 !important; }
@@ -202,7 +202,6 @@ ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, body, html, p, blockquote, fields
  .banner-wrap .banner-content h2 { margin-bottom: 15px; font-size: 2.5em; }
  .banner-wrap .banner-content div.paragraph { margin-bottom: 25px; font-size: 1.2em; }
  .banner-wrap .banner-content p { margin-bottom: 25px; font-size: 1.2em; }
-
  .wsite-section { height: auto !important; }
  #wsite-mini-cart { position: fixed !important; top: inherit !important; bottom: 0px; left: 0 !important; z-index: 6; width: 100%; border: none; border-radius: 0; backface-visibility: hidden; -webkit-backface-visibility: hidden; -webkit-transition: all 300ms ease-in-out; -moz-transition: all 300ms ease-in-out; -ms-transition: all 300ms ease-in-out; -o-transition: all 300ms ease-in-out; transition: all 300ms ease-in-out; }
  #wsite-mini-cart.arrow-top:before, #wsite-mini-cart.arrow-top:after { border: none !important; }
