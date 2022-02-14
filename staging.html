@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head> </head>
+<body>
+
+
+
+   <script>
+
+// for (let i = 0; i < 30; i++) {
+//   document.write("<div><div class="+"wsite-image wsite-image-border-none "+ "style="+"padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center"+"> <a href="+"https://eshq.coffee/"+" target="+"_blank"+"> <img src="+"images/"+i+".jpg"+" alt="+"Picture"+" style="+"width:auto;max-width:30%"+"> </a> <div style="+"display:block;font-size:90%"+"></div> </div></div>");
+
+//     document.write("<div class="+"paragraph"+" style="+"text-align:center;"+"><font color="+"#2a2a2a"+" size="+"4"+">Eshq Coffee -عشق القهوة</font></div>");
+// }
+
+
+
+// document.write("<div><div class="+"wsite-image wsite-image-border-none "+ "style="+"padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center"+"> <a href="+"https://eshq.coffee/"+" target="+"_blank"+"> <img src="+"images/34.jpg"+" alt="+"Picture"+" style="+"width:auto;max-width:30%"+"> </a> <div style="+"display:block;font-size:90%"+"></div> </div></div>");
+
+//   document.write("<div class="+"paragraph"+" style="+"text-align:center;"+"><font color="+"#2a2a2a"+" size="+"4"+">Eshq Coffee -عشق القهوة</font></div>");
+
+
+
+const website = {
+  name:"Eshq Coffee -عشق القهوة",
+  url:"https://eshq.coffee/",
+  image:"34.jpg"
+}
+
+const website2 = {
+  name:"barista club -  باريستا كلوب",
+  url:"https://baristaclub-sa.com/",
+  image:"155.jpg"
+}
+
+const arrayOfWebsites = [website,website2];
+
+// let x = website;
+
+// document.write("<div><div class="+"wsite-image wsite-image-border-none "+ "style="+"padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center"+"> <a href="+x.url+" target="+"_blank"+"> <img src="+"images/"+x.image+" alt="+"Picture"+" style="+"width:auto;max-width:30%"+"> </a> <div style="+"display:block;font-size:90%"+"></div> </div></div>");
+
+//   document.write("<div class="+"paragraph"+" style="+"text-align:center;"+"><font color="+"#2a2a2a"+" size="+"4"+">"+x.name+"</font></div>");
+
+
+
+
+
+
+
+arrayOfWebsites.forEach((item) => {
+      
+ document.write("<div><div class="+"wsite-image wsite-image-border-none "+ "style="+"padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center"+"> <a href="+item.url+" target="+"_blank"+"> <img src="+"images/"+item.image+" alt="+"Picture"+" style="+"width:auto;max-width:30%"+"> </a> <div style="+"display:block;font-size:90%"+"></div> </div></div>");
+
+  document.write("<div class="+"paragraph"+" style="+"text-align:center;"+"><font color="+"#2a2a2a"+" size="+"4"+">"+item.name+"</font></div>");
+   
+   });
+
+
+
+   </script>
+
+
+
+
+
+
+<!-- <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href="https://eshq.coffee/" target="_blank">
+<img src="images/34.jpg" alt="Picture" style="width:auto;max-width:30%">
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div> -->
+
+<!-- <div class="paragraph" style="text-align:center;"><font color="#2a2a2a" size="4">Eshq Coffee -عشق القهوة</font></div> -->
+
+
+
+
+
+</body>
+</html>
