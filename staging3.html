@@ -128,12 +128,12 @@ _W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":
 		)
 	}
 
-	$().ready(function(){
-    $.getJSON( "/json.json", function( data ) {
-    console.log(data);
-    $("#text").html(data["text"]);
-  });
-});
+// 	$().ready(function(){
+//     $.getJSON( "/json.json", function( data ) {
+//     console.log(data);
+//     $("#text").html(data["text"]);
+//   });
+// });
 
 //-->
 </script>
@@ -259,6 +259,16 @@ _W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":
 				<!-- <td class="wsite-multicol-col" style="width:33.333333333333%; padding:0 15px;"> -->
 
   <script>
+  	const arrayOfWebsites;
+$().ready(function(){
+    $.getJSON( "/json.json", function( data ) {
+    console.log(data);
+    arrayOfWebsites = data
+    $("#text").html(data["text"]);
+  });
+});
+
+
 const website = {
   name:"Eshq Coffee -عشق القهوة",
   url:"https://eshq.coffee/",
@@ -270,8 +280,6 @@ const website2 = {
   url:"https://baristaclub-sa.com/",
   image:"155.jpg"
 }
-
-const arrayOfWebsites = [website,website2,website,website2,website,website2,website,website2,website,website2,website,website2,website2,website,website2,website,website2,website,website2,website,website2,website,website2,website2,website,website2,website,website2,website,website2,website,website2,website,website2,website2,website,website2,website,website2,website,website2,website,website2,website,website2,website2,website,website2,website,website2,website,website2,website,website2,website,website2,website2,website,website2,website,website2,website,website2,website,website2,website,website2,website2,website,website2,website,website2,website,website2,website,website2,website,website2,website2,website,website2,website,website2,website,website2,website,website2,website,website2,website2,website,website2,website,website2,website,website2,website,website2,website,website2,website2,website2,website,website2,website,website2,website,website2,website,website2,website,website2,website2,website,website2,website,website2,website,website2,website,website2,website,website2,website2,website,website2,website,website2,website,website2,website,website2,website,website2,website2,website,website2,website,website2,website,website2,website,website2,website,website2,website2,website,website2,website,website2,website,website2,website,website2,website,website2,website2,website2,website,website2,website,website2,website,website2,website,website2,website,website2,website2,website,website2,website,website2,website,website2,website,website2,website,website2,website2,website,website2,website,website2,website,website2,website,website2,website,website2,website2,website,website2,website,website2,website,website2,website,website2,website,website2,website2,website,website2,website,website2,website,website2,website,website2,website,website2];
 
 // document.write("<td class="+"wsite-multicol-col"+"style="+"width:33.333333333333%; padding:0 15px;"+">");
 arrayOfWebsites.forEach((item,index) => {
