@@ -300,7 +300,23 @@ _W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":
 
 
   // document.write("</td>");
-const arrayOfWebsites; 
+
+const website = {
+  name:"Eshq Coffee -عشق القهوة",
+  url:"https://eshq.coffee/",
+  image:"34.jpg"
+}
+
+const website2 = {
+  name:"barista club -  باريستا كلوب",
+  url:"https://baristaclub-sa.com/",
+  image:"155.jpg"
+}
+
+const arrayOfWebsites = [website,website];
+
+
+
 	$().ready(function(){
     $.getJSON( "/json.json", function( data ) {
     console.log(data);
