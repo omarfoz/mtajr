@@ -306,7 +306,7 @@ _W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":
     console.log(data);
     document.write("Hello World!1");
     $("#text").html(data["text"]);
-    document.write(""+#data["text"]+"");
+    document.write(data["text"][0].name);
   });
 });
 
