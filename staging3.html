@@ -259,12 +259,19 @@ _W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":
 				<!-- <td class="wsite-multicol-col" style="width:33.333333333333%; padding:0 15px;"> -->
 
   <script>
-  	const arrayOfWebsites;
 $().ready(function(){
     $.getJSON( "/json.json", function( data ) {
     console.log(data);
-    arrayOfWebsites = data
+    
     $("#text").html(data["text"]);
+
+    data.forEach((item,index) => {
+ 
+document.write("<div><div class="+"wsite-image wsite-image-border-none "+ "style="+"padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center"+"> <a href="+item.url+" target="+"_blank"+"> <img src="+"images/"+item.image+" alt="+"Picture"+" style="+"width:auto;max-width:20%"+"> </a> <div style="+"display:block;font-size:90%"+"></div> </div></div>");
+
+  document.write("<div class="+"paragraph"+" style="+"text-align:center;"+"><font color="+"#2a2a2a"+" size="+"4"+">"+item.name+"</font></div>");
+ 
+   });
   });
 });
 
@@ -282,13 +289,13 @@ const website2 = {
 }
 
 // document.write("<td class="+"wsite-multicol-col"+"style="+"width:33.333333333333%; padding:0 15px;"+">");
-arrayOfWebsites.forEach((item,index) => {
+// arrayOfWebsites.forEach((item,index) => {
  
-document.write("<div><div class="+"wsite-image wsite-image-border-none "+ "style="+"padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center"+"> <a href="+item.url+" target="+"_blank"+"> <img src="+"images/"+item.image+" alt="+"Picture"+" style="+"width:auto;max-width:20%"+"> </a> <div style="+"display:block;font-size:90%"+"></div> </div></div>");
+// document.write("<div><div class="+"wsite-image wsite-image-border-none "+ "style="+"padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center"+"> <a href="+item.url+" target="+"_blank"+"> <img src="+"images/"+item.image+" alt="+"Picture"+" style="+"width:auto;max-width:20%"+"> </a> <div style="+"display:block;font-size:90%"+"></div> </div></div>");
 
-  document.write("<div class="+"paragraph"+" style="+"text-align:center;"+"><font color="+"#2a2a2a"+" size="+"4"+">"+item.name+"</font></div>");
+//   document.write("<div class="+"paragraph"+" style="+"text-align:center;"+"><font color="+"#2a2a2a"+" size="+"4"+">"+item.name+"</font></div>");
  
-   });
+//    });
 // document.write("</td>");
 
 
