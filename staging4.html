@@ -221,6 +221,19 @@ _W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":
 
 <script>
 
+
+	function randomArrayShuffle(array) {
+  var currentIndex = array.length, temporaryValue, randomIndex;
+  while (0 !== currentIndex) {
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+  return array;
+}
+
 const website = {
   name:"Eshq Coffee -عشق القهوة",
   url:"https://eshq.coffee/",
@@ -246,6 +259,8 @@ data.mtajr.forEach((item,index) => {
 arrayOfWebsites.push(item)
  
    });
+randomArrayShuffle(arrayOfWebsites); 
+
 
 arrayOfWebsites.forEach((item,index) => {
  
@@ -267,7 +282,7 @@ document.write("<div><div class="+"wsite-image wsite-image-border-none "+ "style
 
 
    </script>
-			
+
 
 		</li>
 		<li id="pg459078598809172788" class="wsite-menu-item-wrap">
